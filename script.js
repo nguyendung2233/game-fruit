@@ -593,35 +593,6 @@ closeLeaderboardButton.addEventListener("click", () => {
     leaderboardModal.style.display = "none";
 });
 
-// script.js
-
-// Hàm để cập nhật trạng thái mở khóa cấp độ
-function unlockLevel(level) {
-    // Lấy cấp độ đã mở từ localStorage
-    let unlockedLevel = parseInt(localStorage.getItem("unlockedLevel")) || 1;
-
-    // Nếu cấp độ hiện tại lớn hơn cấp độ đã mở, cập nhật
-    if (level > unlockedLevel) {
-        localStorage.setItem("unlockedLevel", level);
-        alert(`Bạn đã mở khóa Level ${level}!`);
-    }
-}
-
-// Giả sử hàm này được gọi khi người chơi hoàn thành cấp độ
-function completeLevel(currentLevel) {
-    // Logic hoàn thành cấp độ
-    console.log(`Cấp độ ${currentLevel} đã hoàn thành!`);
-    
-    // Mở khóa cấp độ tiếp theo
-    unlockLevel(currentLevel + 1); // Mở khóa cấp độ tiếp theo
-}
-
-// Ví dụ: khi người chơi nhấn nút hoàn thành
-document.getElementById('complete-level').addEventListener('click', () => {
-    const currentLevel = 1; // Thay đổi số này theo cấp độ hiện tại
-    completeLevel(currentLevel);
-});
-
 
 // Start the game when page is loaded
 startGame();
