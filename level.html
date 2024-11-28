@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Level</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+        }
+        h1 {
+            color: #00796b;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .level-container {
+            display: grid;
+            grid-template-columns: repeat(5, 120px);
+            gap: 25px;
+        }
+        .level-button {
+            width: 100px;
+            height: 100px;
+            background-color: #00796b;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .level-button.locked {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .level-button:hover:not(.locked) {
+            background-color: #004d40;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Chọn Level</h1>
+<div class="level-container"></div>
+
+<script>
+    // Số level tối đa
+    const totalLevels = 10;
+
+    // Lấy trạng thái level đã mở từ localStorage
+    let unlockedLevel = parseInt(localStorage.getItem("unlockedLevel")) || 1;
+
+    // Tạo các nút level
+    const levelContainer = document.querySelector('.level-container');
+    for (let i = 1; i <= totalLevels; i++) {
+        const button = document.createElement('button');
+        button.classList.add('level-button');
+        button.textContent = i;
+
+        // Kiểm tra xem cấp độ đã được mở khóa hay chưa
+        if (i > unlockedLevel) {
+            button.classList.add('locked');
+        }
+
+        // Gắn sự kiện khi bấm vào nút
+        button.addEventListener('click', () => {
+            if (i <= unlockedLevel) {
+                // Chuyển hướng đến cấp độ tương ứng
+                window.location.href = `level${i}.html`; 
+            } else {
+                alert('Level này chưa được mở khóa!');
+            }
+        });
+
+        levelContainer.appendChild(button);
+    }
+
+    // Cập nhật giao diện khi trạng thái mở khóa thay đổi
+    function updateLevelUI() {
+        document.querySelectorAll('.level-button').forEach((btn, index) => {
+            if (index + 1 <= unlockedLevel) {
+                btn.classList.remove('locked');
+            } else {
+                btn.classList.add('locked');
+            }
+        });
+    }
+
+    // Theo dõi sự thay đổi trạng thái mở khóa level (nếu cần)
+    window.addEventListener("storage", () => {
+        unlockedLevel = parseInt(localStorage.getItem("unlockedLevel")) || 1;
+        updateLevelUI();
+    });
+
+    // Cập nhật giao diện lúc đầu
+    updateLevelUI();
+</script>
+
+</body>
+</html>

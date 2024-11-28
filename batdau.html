@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game iFruit</title>
+    <link rel="stylesheet" href="batdau.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="game-start-screen">
+        <h1>Game iFruit</h1>
+        <div class="fruits">
+            <!-- Hình các loại trái cây -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYlXSzsFmxfNb0FCBXdDP8eat2awmhnJOy2g&s" alt="Trái cây 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLXTkXlhyRpdYGOsU-lidgimfkgXD95ViPVQ&s" alt="Trái cây 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjS3ScZhrIUGGgKhT9GOArqXVp7MuoZ1DpOA&s" alt="Trái cây 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifhJ09Za92ZJtN3JjRL5WB3OMLvano3Otjw&s" alt="Trái cây 4">
+        </div>
+        
+        <!-- Nút Bắt đầu -->
+        <div class="button-container">
+            <button class="start-button" id="start-button">
+                <img src="https://e7.pngegg.com/pngimages/818/523/png-clipart-pixel-art-start-button-text-logo-thumbnail.png" alt="Bắt đầu">
+            </button>
+        </div>
+        
+        <!-- Các tùy chọn bên phải -->
+<div class="options">
+    <!-- Nút âm thanh -->
+    <button class="option-button sound-button" id="sound-toggle">
+        <i class="fas fa-volume-up"></i> <!-- Biểu tượng âm thanh -->
+    </button>
+    
+    <!-- Nút nhạc nền -->
+    <button class="option-button music-button">
+        <i class="fas fa-music"></i> <!-- Biểu tượng nhạc -->
+    </button>
+    
+
+<button class="option-button info-button"><i class="fas fa-info-circle"></i></button>
+<div id="game-instructions-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-instructions">&times;</span>
+        <h2>Hướng Dẫn Chơi Game</h2>
+        <p>
+            - Chọn một trái cây bằng cách nhấp vào nó.<br>
+            - Sau khi chọn, bạn nhấp vào trái cây liền kề để hoán đổi vị trí.<br>
+            - Mục tiêu là tạo ra chuỗi 3 hoặc nhiều hơn trái cây cùng loại để nhận điểm.<br>
+            - Hoàn thành mục tiêu để lên cấp.<br>
+            - Mỗi cấp độ có yêu cầu điểm riêng và độ khó sẽ tăng dần.
+        </p>
+    </div>
+</div>
+
+    </div>
+
+    <script src="batdau.js"></script>
+</body>
+</html>

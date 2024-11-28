@@ -1,0 +1,245 @@
+     body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB;
+            background-image: url("data:image/jpeg;base64,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");
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #8b2e37;
+        }
+        .header .score, .header .level-score, .header .level {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+        .header .score i, .header .level-score i, .header .level i {
+            margin-right: 5px;
+        }
+        .header .controls {
+            display: flex;
+            gap: 10px;
+        }
+        .header .controls button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .header .controls button:hover {
+            background-color: #45a049;
+        }
+        .header .controls i {
+            font-size: 20px;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 5px;
+            padding: 20px;
+            background-color: #F5F5DC;
+            border: 5px solid #8B4513;
+            margin: 20px auto;
+            width: fit-content;
+        }
+        .game-board img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .game-board img.selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5);
+        }
+        .game-board img.matched {
+            animation: matched 0.5s forwards;
+        }
+        @keyframes matched {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+        .timer-bar {
+            width: 90%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px auto;
+            height: 15px;
+        }
+        .timer-bar-inner {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 100%;
+            transition: width 1s linear;
+        }
+        .instructions {
+            text-align: center;
+            margin: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        
+        .instructions h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        
+        .instructions p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .controls button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
+        .controls button:hover {
+            color: #f39c12;
+        }
+        
+        #instructions {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        
+        .close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        #change-level-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        #change-level-button:hover {
+            background-color: #45a049;
+        }
+        #timer-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0; /* Màu nền thanh ngoài */
+            border-radius: 10px; /* Bo góc */
+            overflow: hidden; /* Giữ thanh bên trong không vượt ra ngoài */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+            border: 1px solid #ccc; /* Viền thanh ngoài */
+        }
+        
+        #timer-bar-inner {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #a0af4c, #c3624a); /* Gradient màu thanh bên trong */
+            transition: width 0.3s ease-out; /* Hiệu ứng mượt khi thanh giảm */
+            border-radius: 10px; /* Bo góc cho thanh bên trong */
+        }
+        #leaderboard-modal .modal-content {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        #leaderboard-modal table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        #leaderboard-modal th, #leaderboard-modal td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        #leaderboard-modal th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+         .button-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .start-button img {
+        width: 100px; /* Điều chỉnh kích thước ảnh nếu cần */
+    }
+    .start-button,
+    .settings-button,
+    .options-button {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .settings-button {
+        background-color: #4CAF50; /* Màu nút cài đặt */
+        color: white;
+    }
+    .options-button {
+        background-color: #2196F3; /* Màu nút tùy chọn */
+        color: white;
+    }
+    .start-button:hover,
+    .settings-button:hover,
+    .options-button:hover {
+        opacity: 0.8; /* Hiệu ứng hover */
+    }
+    
+        
+        
+        
+        
+        

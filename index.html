@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game iFruit</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" src="sound/nhacnen.mp3" loop></audio>
+    <audio id="level-up-sound" src="sound/levelup.mp3"></audio>
+    <audio id="match-sound" src="sound/chondung.mp3"></audio>
+    <audio id="select-sound" src="assets/sounds/select.mp3"></audio>
+    <audio id="game-over-sound" src="assets/sounds/game-over.mp3"></audio>
+
+
+    
+    <div class="header">
+        <div class="score">
+            <i class="fas fa-star"></i>
+            <span id="score">0</span>
+        </div>
+        <div class="level-score">
+            <i class="fas fa-trophy"></i>
+            <span id="level-score">Level Score: 0</span>
+        </div>
+        <div class="level">
+            <i class="fas fa-layer-group"></i>
+            <span id="level">Level: 1</span>
+        </div>
+        <div class="controls">
+            <button id="leaderboard-button" title="Leaderboard">🏆</button>
+            <!-- Modal Bảng Xếp Hạng -->
+    <div id="leaderboard-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-leaderboard">&times;</span>
+        <h2>Bảng Xếp Hạng</h2>
+        <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Hạng</th>
+                    <th>Tên Người Chơi</th>
+                    <th>Điểm</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-table">
+                <!-- Dữ liệu bảng xếp hạng sẽ được chèn vào đây -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+            <button id="pause-button"><i class="fas fa-pause"></i></button>
+            <button id="change-level-button" title="Change Level">Level</button>
+            <button id="reload-button"><i class="fas fa-redo"></i></button>
+            <button id="hint-button" title="Hint"><i class="fas fa-lightbulb"></i></button>
+            <button id="help-button" title="Instructions"><i class="fas fa-question"></i></button>
+            <button id="settings-button" title="Settings"><i class="fas fa-cog"></i></button>
+           
+        </div>
+    </div>
+    
+    <div class="instructions" id="instructions" style="display: none;">
+        <h2>Hướng Dẫn</h2>
+        <p>Cách chơi:
+        Chọn trái cây: Nhấp chuột vào một trái cây trên bảng để chọn nó.
+        Hoán đổi trái cây: Sau khi chọn một trái cây, nhấp vào trái cây liền kề (ngang hoặc dọc) để hoán đổi vị trí của chúng. Mục tiêu là tạo thành dãy 3 trái cây giống nhau.
+        Kết hợp giống nhau: Bạn cần tạo ra ít nhất 3 trái cây cùng loại xếp thành một hàng (ngang hoặc dọc). Những trái cây này sẽ biến mất và bạn nhận điểm.
+        Cấp độ (Level):
+        Mỗi cấp độ có một điểm số mục tiêu. Khi bạn đạt đủ số điểm yêu cầu của cấp độ hiện tại, bạn sẽ lên cấp.
+        Các cấp độ càng cao, thời gian sẽ càng giảm và yêu cầu ghi điểm càng khó hơn.</p>
+    </div>
+    
+    <div class="timer-bar">
+        <div class="timer-bar-inner" id="timer-bar-inner"></div>
+    </div>
+    
+    <div class="game-board" id="game-board">
+    </div>
+
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cài Đặt</h2>
+            <div>
+                <label for="sound-toggle">Âm thanh:</label>
+                <input type="checkbox" id="sound-toggle" checked>
+            </div>
+
+            <div>
+                <label for="language-select">Ngôn ngữ:</label>
+                <select id="language-select">
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
